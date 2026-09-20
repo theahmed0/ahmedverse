@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>موقعي الشخصي</title>
+  <meta name="description" content="موقع شخصي احترافي">
+  <meta name="theme-color" content="#111827">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="موقعي الشخصي">
+  <meta property="og:description" content="موقع شخصي احترافي">
+  <meta property="og:image" content="">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">تخطَّ إلى المحتوى</a>
+  <header class="site-header">
+    <a class="brand" href="#top" id="brand">موقعي</a>
+    <nav aria-label="التنقل الرئيسي">
+      <a href="#projects">المشاريع</a>
+      <a href="#posts">المنشورات</a>
+      <a href="#media">الوسائط</a>
+      <a href="#contact">تواصل</a>
+    </nav>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="تغيير المظهر">◐</button>
+  </header>
+
+  <main id="main">
+    <div id="home">
+      <section class="hero" id="top" aria-labelledby="hero-name"></section>
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="section-head"><div><span class="eyebrow">WORK</span><h2 id="projects-title">المشاريع</h2></div><span id="project-count" class="count"></span></div>
+        <div id="projects-list"></div>
+      </section>
+      <section class="section" id="posts" aria-labelledby="posts-title">
+        <div class="section-head"><div><span class="eyebrow">JOURNAL</span><h2 id="posts-title">المنشورات</h2></div><span id="post-count" class="count"></span></div>
+        <div id="posts-list"></div>
+      </section>
+      <section class="section" id="media" aria-labelledby="media-title">
+        <div class="section-head"><div><span class="eyebrow">MEDIA</span><h2 id="media-title">الصور والفيديو</h2></div></div>
+        <div id="media-list" class="media-grid"></div>
+      </section>
+      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+        <span class="eyebrow">CONTACT</span><h2 id="contact-title">تواصل</h2>
+        <div id="contact-body"></div>
+      </section>
+    </div>
+    <article class="post-view" id="post-view" hidden></article>
+  </main>
+
+  <footer class="site-footer" id="footer"></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <noscript><p class="notice">يحتاج هذا الموقع إلى تفعيل JavaScript.</p></noscript>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/backend-config.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

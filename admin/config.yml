@@ -1,0 +1,80 @@
+backend:
+  name: github
+  repo: USERNAME/USERNAME.github.io
+  branch: main
+  squash_merges: true
+
+site_url: https://USERNAME.github.io
+display_url: https://USERNAME.github.io
+locale: ar
+media_folder: assets/uploads
+public_folder: /assets/uploads
+
+collections:
+  - name: site
+    label: "الموقع"
+    files:
+      - name: content
+        label: "المحتوى الكامل"
+        file: data/site.json
+        format: json
+        fields:
+          - label: "معلوماتي"
+            name: profile
+            widget: object
+            fields:
+              - {label: "الاسم", name: name, widget: string}
+              - {label: "المسمى", name: role, widget: string, required: false}
+              - {label: "النبذة", name: bio, widget: text, required: false}
+              - {label: "الصورة الشخصية", name: avatar, widget: image, required: false}
+              - {label: "البريد", name: email, widget: string, required: false}
+              - label: "الروابط"
+                name: links
+                widget: list
+                required: false
+                summary: "{{fields.label}}"
+                fields:
+                  - {label: "الاسم", name: label, widget: string}
+                  - {label: "الرابط", name: url, widget: string}
+          - label: "المشاريع"
+            name: projects
+            widget: list
+            required: false
+            summary: "{{fields.title}}"
+            fields:
+              - {label: "اسم المشروع", name: title, widget: string}
+              - {label: "الوصف", name: description, widget: text, required: false}
+              - {label: "رابط المشروع", name: url, widget: string, required: false}
+              - {label: "صورة المشروع", name: image, widget: image, required: false}
+              - label: "التقنيات"
+                name: tags
+                widget: list
+                required: false
+                field: {label: "تقنية", name: tag, widget: string}
+          - label: "المنشورات"
+            name: posts
+            widget: list
+            required: false
+            summary: "{{fields.title}}"
+            fields:
+              - {label: "المعرف", name: id, widget: string, hint: "قيمة ثابتة وفريدة، مثل post-001"}
+              - {label: "الرابط المختصر", name: slug, widget: string, hint: "بالإنجليزية وبدون مسافات"}
+              - {label: "العنوان", name: title, widget: string}
+              - {label: "التاريخ", name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD"}
+              - {label: "منشور للعامة", name: published, widget: boolean, default: true}
+              - {label: "ملخص", name: summary, widget: text, required: false}
+              - {label: "رابط فيديو مباشر", name: videoUrl, widget: string, required: false, hint: "ضع رابط ملف فيديو تملكه مثل MP4. لا تستخدم رابط صفحة YouTube."}
+              - label: "المحتوى"
+                name: body
+                widget: markdown
+                required: false
+          - label: "الوسائط"
+            name: media
+            widget: list
+            required: false
+            summary: "{{fields.title}}"
+            fields:
+              - {label: "العنوان", name: title, widget: string, required: false}
+              - {label: "النوع", name: type, widget: select, options: [image, video], default: image}
+              - {label: "الرابط", name: url, widget: string}
+              - {label: "النص البديل", name: alt, widget: string, required: false}

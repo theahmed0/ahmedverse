@@ -1,0 +1,34 @@
+{
+  "profile": {
+    "name": "اسمك هنا",
+    "role": "مطوّر ويب وصانع محتوى",
+    "bio": "هذا موقع شخصي احترافي. عدّل كل شيء من لوحة الإدارة في /admin.",
+    "avatar": "",
+    "email": "you@example.com",
+    "links": [
+      { "label": "GitHub", "url": "https://github.com/" }
+    ]
+  },
+  "projects": [
+    {
+      "title": "مشروعي الأول",
+      "description": "وصف مختصر للمشروع وما الذي يقدمه.",
+      "url": "https://example.com",
+      "image": "",
+      "tags": ["HTML", "CSS", "JavaScript"]
+    }
+  ],
+  "posts": [
+    {
+      "id": "welcome",
+      "slug": "welcome",
+      "title": "مرحباً بك",
+      "date": "2026-09-20",
+      "published": true,
+      "summary": "منشور تجريبي يمكنك استبداله من لوحة الإدارة.",
+      "videoUrl": "",
+      "body": "اكتب هنا منشورك باستخدام Markdown.\n\n## عنوان فرعي\n\nيمكنك إضافة **خط عريض** وروابط وقوائم."
+    }
+  ],
+  "media": []
+}
