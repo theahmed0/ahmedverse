@@ -1,11 +1,11 @@
 backend:
   name: github
-  repo: USERNAME/USERNAME.github.io
+  repo: theahmed/ahmedverse
   branch: main
   squash_merges: true
 
-site_url: https://USERNAME.github.io
-display_url: https://USERNAME.github.io
+site_url: https://theahmed.github.io/ahmedverse
+display_url: https://theahmed.github.io/ahmedverse
 locale: ar
 media_folder: assets/uploads
 public_folder: /assets/uploads
