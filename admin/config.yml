@@ -11,6 +11,10 @@ media_folder: assets/uploads
 public_folder: /assets/uploads
 
 collections:
+  # خلي بقية collections كما هي assets/uploads
+public_folder: /assets/uploads
+
+collections:
   - name: site
     label: "الموقع"
     files:
