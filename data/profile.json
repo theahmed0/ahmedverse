@@ -1,10 +1,8 @@
 {
-  "name": "اسمك هنا",
+  "name": "AhmedVerse",
   "role": "مطوّر ويب وصانع محتوى",
-  "bio": "هذا موقع شخصي احترافي. عدّل كل شيء من لوحة الإدارة في /admin.",
-  "avatar": "",
-  "email": "you@example.com",
-  "links": [
-    { "label": "GitHub", "url": "https://github.com/" }
-  ]
+  "bio": "هذا موقع شخصي",
+  "avatar": "/assets/uploads/ChatGPT Image 26 sept. 2026, 22_13_27.png",
+  "email": "************",
+  "links": []
 }
