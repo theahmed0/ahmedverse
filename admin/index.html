@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>لوحة الإدارة</title>
+  <style>
+    body{font-family:system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;background:#0f172a;color:#e2e8f0;margin:0}
+    #boot-msg{max-width:560px;margin:15vh auto 0;padding:24px;text-align:center;line-height:1.9}
+    #boot-msg h1{font-size:1.2rem;margin-bottom:.5rem}
+    #boot-msg code{background:#1e293b;padding:2px 6px;border-radius:4px;direction:ltr;display:inline-block}
+    #boot-msg a{color:#60a5fa}
+    #boot-msg.hidden{display:none}
+  </style>
+</head>
+<body>
+  <div id="sveltia-cms"></div>
+  <div id="boot-msg" class="hidden">
+    <h1>تعذّر فتح لوحة الإدارة</h1>
+    <p>غالباً السبب أن ملف <code>admin/config.yml</code> فيه خطأ، أو أن الاتصال بملفات لوحة الإدارة (CDN) محجوب في شبكتك أو بواسطة أداة حجب إعلانات.</p>
+    <p>جرّب: تعطيل أداة حجب الإعلانات لهذه الصفحة، ثم أعد التحميل. إن استمرت المشكلة افحص تبويب Console في أدوات المطوّر بالمتصفح لمعرفة رسالة الخطأ الدقيقة.</p>
+    <p><a href="https://github.com/theahmed/ahmedverse/edit/main/admin/config.yml">فتح config.yml على GitHub للتعديل مباشرة</a></p>
+  </div>
+  <script src="https://unpkg.com/@sveltia/cms@0.159.2/dist/sveltia-cms.js" defer></script>
+  <script>
+    // إن لم تُحمَّل لوحة الإدارة خلال ثوانٍ قليلة، اعرض رسالة توضيحية بدل شاشة فارغة
+    setTimeout(function () {
+      var mount = document.getElementById('sveltia-cms');
+      if (!mount.hasChildNodes()) {
+        document.getElementById('boot-msg').classList.remove('hidden');
+      }
+    }, 6000);
+  </script>
+</body>
+</html>
