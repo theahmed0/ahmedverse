@@ -1,11 +1,15 @@
 {
   "items": [
     {
-      "title": "مشروعي الأول",
-      "description": "وصف مختصر للمشروع وما الذي يقدمه.",
-      "url": "https://example.com",
-      "image": "",
-      "tags": ["HTML", "CSS", "JavaScript"]
+      "title": "FlipDrop",
+      "description": "انقل ملفاتك بين أي جهازين",
+      "url": "https://github.com/theahmed0/FlipDrop",
+      "image": "/assets/uploads/22.PNG",
+      "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ]
     }
   ]
 }
