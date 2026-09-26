@@ -4,8 +4,8 @@ backend:
   branch: main
   squash_merges: true
 
-site_url: https://theahmed.github.io/ahmedverse
-display_url: https://theahmed.github.io/ahmedverse
+site_url: https://theahmed0.github.io/ahmedverse
+display_url: https://theahmed0.github.io/ahmedverse
 locale: ar
 
 media_folder: assets/uploads
