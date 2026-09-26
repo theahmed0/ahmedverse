@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: theahmed/ahmedverse
+  repo: theahmed0/ahmedverse
   branch: main
   squash_merges: true
 
